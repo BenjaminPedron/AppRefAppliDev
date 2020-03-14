@@ -41,7 +41,12 @@ class Application {
 			sout.println(clavier.readLine());
 			/* Réception/affichage de la réponse */
 			System.out.println(sin.readLine());
-				
+				/* Réception/affichage de la question */
+			/* Saisie clavier/envoie au service de la réponse */
+			sout.println(clavier.readLine());/* Réception/affichage de la question */
+			System.out.println(sin.readLine());
+			/* Saisie clavier/envoie au service de la réponse */
+			sout.println(clavier.readLine());
 			
 		}
 		catch (IOException e) { 
