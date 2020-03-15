@@ -34,6 +34,7 @@ class Application {
 			System.out.println(line.replaceAll("##", "\n"));
 			sout.println(clavier.readLine());
 
+			/* Tant que l'application ne recoit pas succes ou fail, on attend le serveur */
 			while(true) {
 				line = sin.readLine();
 				if(line.equals("succes") || line.equals("fail")) {
@@ -48,7 +49,7 @@ class Application {
 		catch (IOException e) { 
 			System.err.println("Fin de la connexion"); 
 		}
-		/* Refermer dans tous les cas la socket */
+		/* Referme dans tous les cas la socket */
 		try { 
 			if (s != null) s.close(); 
 		} catch (IOException e2) {}		
