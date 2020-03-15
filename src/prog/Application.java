@@ -32,24 +32,17 @@ class Application {
 			/* Menu et choix du service */
 			line = sin.readLine();
 			System.out.println(line.replaceAll("##", "\n"));
-			/* Saisie/envoie du choix */
 			sout.println(clavier.readLine());
-			
-			/* Réception/affichage de la question */
-			System.out.println(sin.readLine());
-			/* Saisie clavier/envoie au service de la réponse */
-			sout.println(clavier.readLine());
-			/* Réception/affichage de la réponse */
-			System.out.println(sin.readLine());
-				/* Réception/affichage de la question */
-			/* Saisie clavier/envoie au service de la réponse */
-			sout.println(clavier.readLine());/* Réception/affichage de la question */
-			System.out.println(sin.readLine());
-			/* Saisie clavier/envoie au service de la réponse */
-			sout.println(clavier.readLine());
-			System.out.println(sin.readLine());
-			/* Saisie clavier/envoie au service de la réponse */
-			
+
+			while(true) {
+				line = sin.readLine();
+				if(line.equals("succes") || line.equals("fail")) {
+					System.out.println(line.replaceAll("##", "\n"));
+					break;
+				}
+				System.out.println(line.replaceAll("##", "\n"));
+				sout.println(clavier.readLine());
+			}
 			
 		}
 		catch (IOException e) { 
